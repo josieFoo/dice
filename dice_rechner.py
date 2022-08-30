@@ -22,9 +22,9 @@ def reg_gen(n):
     initial values: 0
     """
     
-    reg={}
+    reg = {}
     for i in range(1,n+1):
-        reg[i]=0
+        reg[i] = 0
     
     return reg
 
@@ -38,17 +38,20 @@ def dic(n, m):
     
     reg=reg_gen(n)
     for i in range (0, m):
-        k=key_gen(n)
+        k = key_gen(n)
         if k in reg:
-            reg[k]+=1
+            reg[k] += 1
         print(reg)
         
+    reg_prob = {}
     for j in range(1, n+1):
-        print(f"{j}: {reg[j]/m*100} %")
-    #print (f"{reg[1]/m*100}%, {reg[2]/m*100}%, {reg[3]/m*100}%, {reg[4]/m*100}%, {reg[5]/m*100}%,{reg[6]/m*100}%")
+        reg_prob[j]= f"{reg[j]/m*100} %"
+        #print(f"{j}: {reg[j]/m*100} %")
+    
     print("expected average: "+ f"{1/n*100}" + " %")
-    #print("tracking"*100)
+    print(reg_prob)
+    
 #test case
-dic(3,2**12)
+dic(2, 2**10)
 
 
