@@ -45,13 +45,14 @@ def dic(n, m):
         
     reg_prob = {}
     for j in range(1, n+1):
-        reg_prob[j]= f"{reg[j]/m*100} %"
+        prob = reg[j]/m*100
+        reg_prob[j]= f"{prob} %"
         #print(f"{j}: {reg[j]/m*100} %")
     
     print("expected average: "+ f"{1/n*100}" + " %")
     print(reg_prob)
     
 #test case
-dic(2, 2**10)
+dic(3, 2**10)
 
 

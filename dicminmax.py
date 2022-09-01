@@ -20,6 +20,8 @@ def keywithmaxval(d):
             min_k.append(item)
     print(max_k)
     print(min_k)
+    return
+
 
 #test
 d={'a': 1, 'b': 2, 'c': 0, 'd': 2, 'e':0}
