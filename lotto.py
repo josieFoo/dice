@@ -32,10 +32,12 @@ def lotto_pull(total, n):
     i=random.randint(1,len(pool))
     pulled_ball=pool.pop(i-1)
     pulled_balls.append(pulled_ball)
-  print(pool, len(pool))
+  print(pool, pulled_balls, len(pool))
   return pulled_balls, len(pulled_balls)
 
 def lotto_play():
   return
 
-
+#test
+lotto_pull(45, 5)
+#dice(100)
