@@ -1,5 +1,6 @@
 import random
 import time
+import sys
 
 def dice(count):
   dic={1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
@@ -17,7 +18,6 @@ def dice(count):
        return (c, 'mal geworfen')
      elif not count:
        break
-      
 
 def lotto_pool(n):
   arr=[]
@@ -38,6 +38,14 @@ def lotto_pull(total, n):
 def lotto_play():
   return
 
+if __name__ == "__main__":
+  if len(sys.argv) != 3 or int(sys.argv[1]) < int(sys.argv[2]):
+    print("enter two numbers.")
+  else:
+    arg1 = int(sys.argv[1])
+    arg2 = int(sys.argv[2])
+    result = lotto_pull(arg1, arg2)
+    print("{} balls of {} balls will be pulled.".format(arg2, arg1))
+    print(result)
+    
 #test
-lotto_pull(45, 5)
-#dice(100)
