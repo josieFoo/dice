@@ -20,23 +20,43 @@ def dice(count):
        break
 
 def lotto_pool(n):
+  """
+  gernerates Lotto pool
+  
+  parameters: integer 
+  
+  return: array of length of n
+  """
+  
   arr=[]
   for i in range (1,n+1) :
     arr.append(i)
   return arr
 
 def lotto_pull(total, n):
+  """
+  parametners:
+      total (integer): total number of balls
+      n (integer): how many balls will be pulled
+  returns:
+  
+  """
+  
   pulled_balls=[]
   pool=lotto_pool(total)
+  
   for mal in range(0,n):
     i=random.randint(1,len(pool))
     pulled_ball=pool.pop(i-1)
     pulled_balls.append(pulled_ball)
   print(pool, pulled_balls, len(pool))
+  
   return pulled_balls, len(pulled_balls)
 
+"""
 def lotto_play():
   return
+"""
 
 if __name__ == "__main__":
   if len(sys.argv) != 3 or int(sys.argv[1]) < int(sys.argv[2]):
@@ -45,7 +65,7 @@ if __name__ == "__main__":
     arg1 = int(sys.argv[1])
     arg2 = int(sys.argv[2])
     result = lotto_pull(arg1, arg2)
-    print("{} balls of {} balls will be pulled.".format(arg2, arg1))
+    print("{} ball(s) of {} balls will be pulled.".format(arg2, arg1))
     print(result)
     
-#test
+
