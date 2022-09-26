@@ -49,7 +49,7 @@ def lotto_pull(total, n):
     i=random.randint(1,len(pool))
     pulled_ball=pool.pop(i-1)
     pulled_balls.append(pulled_ball)
-  print(pool, pulled_balls, len(pool))
+  print(pool, pulled_balls)
   
   return pulled_balls, len(pulled_balls)
 
