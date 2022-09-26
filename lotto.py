@@ -39,7 +39,7 @@ def lotto_pull(total, n):
       total (integer): total number of balls
       n (integer): how many balls will be pulled
   returns:
-  
+      the array of pulled balls and number of balls
   """
   
   pulled_balls=[]
