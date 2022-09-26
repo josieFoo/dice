@@ -65,7 +65,7 @@ if __name__ == "__main__":
     arg1 = int(sys.argv[1])
     arg2 = int(sys.argv[2])
     result = lotto_pull(arg1, arg2)
-    print("{} ball(s) of {} balls will be pulled.".format(arg2, arg1))
+    print("{} ball(s) of {} balls are pulled.".format(arg2, arg1))
     print(result)
     
 
